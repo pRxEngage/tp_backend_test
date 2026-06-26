@@ -1,0 +1,18 @@
+# General
+# ------------------------------------------------------------------------------
+USE_DOCKER=yes
+IPYTHONDIR=/app/.ipython
+# Redis
+# ------------------------------------------------------------------------------
+REDIS_URL=redis://redis:6379/0
+
+# Celery
+# ------------------------------------------------------------------------------
+
+# ClinicalTrials.gov sample API
+# ------------------------------------------------------------------------------
+CTGOV_API_BASE_URL=http://54.246.206.17
+
+# Flower
+CELERY_FLOWER_USER=bKjzBASnJfOFTazvONMswwLYIZUZSNFn
+CELERY_FLOWER_PASSWORD=t4cmVhPyjh4RiEhvp0B7fQ9PAcRlS2yeHzlk3HyXlW0diFlsGikDpKQBYrM01tEC
