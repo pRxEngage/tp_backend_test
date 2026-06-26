@@ -11,7 +11,7 @@ REDIS_URL=redis://redis:6379/0
 
 # ClinicalTrials.gov sample API
 # ------------------------------------------------------------------------------
-CTGOV_API_BASE_URL=http://54.246.206.17
+CTGOV_API_BASE_URL=http://sample-api.trialport.com
 
 # Flower
 CELERY_FLOWER_USER=bKjzBASnJfOFTazvONMswwLYIZUZSNFn

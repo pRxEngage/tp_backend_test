@@ -24,7 +24,7 @@ GET {CTGOV_API_BASE_URL}/api/v2/studies/{nct_id}
 The default local setting points at the assessment API host:
 
 ```text
-CTGOV_API_BASE_URL=http://54.246.206.17
+CTGOV_API_BASE_URL=http://sample-api.trialport.com
 ```
 
 The sample API intentionally behaves like an unreliable external service. Some requests may fail, some may hang, and you may run into other issues while querying it. Treat it as a third-party API you do not control.
@@ -60,6 +60,8 @@ The project includes:
 - Celery result storage configured through Postgres.
 
 The importer itself is intentionally incomplete. You should decide how to parse the CSV, enqueue work, retry failures, store progress, track import outcomes, and expose errors.
+
+The provided models are intentionally minimal. You are expected to change the schema as your design requires. Add tracking, logging, storage, progress fields, row-level outcomes, raw payload storage, or other persistence if those choices help you build a reliable and understandable import workflow.
 
 ## Local Setup
 
@@ -127,12 +129,14 @@ Reset local Docker volumes:
 just prune
 ```
 
+This is useful if your local database gets into a bad state and you want to rebuild from a clean set of Docker volumes.
+
 ## Configuration
 
 The CT.gov sample API base URL is configured with:
 
 ```text
-CTGOV_API_BASE_URL=http://54.246.206.17
+CTGOV_API_BASE_URL=http://sample-api.trialport.com
 ```
 
 You may override this in `.envs/.local/.django`.
